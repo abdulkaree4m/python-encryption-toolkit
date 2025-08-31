@@ -18,6 +18,16 @@ The **Python Encryption Toolkit** is a Python-based application that allows user
 - **Reset and Clear Functions**: Easily reset input fields and outputs.
 - **Future Feature**: Load images for encryption.
 
+## Demo
+
+Insert gif or link to demo
+
+[Demo Link](https://abdulkaree4m.github.io/python-encryption-toolkit/)
+![RSA Interface](images/RSA_interface.png)
+![RC4 Interface](images/rc4_interface.png)
+![Classic Algorithms](images/classic_algorithms.png)
+
+
 ### Installation & Usage
 1. Clone the repository:
 2. 
@@ -26,6 +36,9 @@ The **Python Encryption Toolkit** is a Python-based application that allows user
 ```bash
 git clone https://github.com/abdulkaree4m/python-encryption-toolkit.git
 cd python-encryption-toolkit
+
+
+
 
 
 
