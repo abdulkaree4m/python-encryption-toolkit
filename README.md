@@ -20,5 +20,12 @@ The **Python Encryption Toolkit** is a Python-based application that allows user
 
 ### Installation & Usage
 1. Clone the repository:
+2. 
+## Installation | التثبيت
+1. انسخ المستودع إلى جهازك:
 ```bash
+git clone https://github.com/abdulkaree4m/python-encryption-toolkit.git
+cd python-encryption-toolkit
+
+
 
