@@ -21,3 +21,30 @@ def keyless(plaintext,key):
                 cip=''.join(l)
 
                 return cip 
+from math import ceil
+
+def railway_de(text,key):
+        
+            c=0
+            reslute=""
+            col=len(text)/key
+
+            if type(col)is float:
+                    col=ceil(col)
+
+            arr=[]
+            for i in range(key):
+                    row=[]
+                    for j in range(col):
+                            row.append("")
+                    arr.append(row)
+            for i in range(key):
+                    for j in range(col):
+                            if c<len(text):
+                                    arr[i][j]=text[c]
+                                    c+=1
+            for i in range(len(max(arr,key=len))):
+                    for row in arr:
+                            reslute+=row[i]
+            
+            return ''.join(reslute)
