@@ -1,5 +1,5 @@
         #-------------------------------------keyless---------------------------
-
+from math import ceil
 def keyless(plaintext,key):
               
                 row=0
@@ -21,7 +21,7 @@ def keyless(plaintext,key):
                 cip=''.join(l)
 
                 return cip 
-from math import ceil
+
 
 def railway_de(text,key):
         
