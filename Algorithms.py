@@ -21,8 +21,7 @@ def keyless(plaintext,key):
                 cip=''.join(l)
 
                 return cip 
-
-
+#//////////////////////////////////////////////////////
 def railway_de(text,key):
         
             c=0
