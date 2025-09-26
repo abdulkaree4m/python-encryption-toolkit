@@ -53,9 +53,9 @@ class Encrypt:
         self.displayy_mess.pack(pady=10)
 
 
-        Button(self.manage_fras, text="توليد المفاتيح", bg='#11922E', command=self.generate_keys_action).place(x=380, y=20, width=90, height=25)
-        Button(self.manage_fras, text="تشفير", bg='#11900E', command=self.encrypt_action).place(x=380, y=135, width=90, height=25)
-        Button(self.manage_fras, text="فك التشفير", bg='#11922E', command=self.decrypt_action).place(x=380, y=100, width=90, height=25)
+        Button(self.manage_fras, text="توليد المفاتيح", bg="#A85626", command=self.generate_keys_action).place(x=380, y=20, width=90, height=25)
+        Button(self.manage_fras, text="تشفير", bg="#7B7E7A", command=self.encrypt_action).place(x=380, y=135, width=90, height=25)
+        Button(self.manage_fras, text="فك التشفير", bg="#BF5A20", command=self.decrypt_action).place(x=380, y=100, width=90, height=25)
 
         Button(self.manage_fras, text="Reset", bg="powder blue", command=self.reset_rsa_action).place(x=20, y=250, width=40, height=25)
         Button(self.manage_fras, text="رجوع", bg='red', fg='white', command=lambda: self.manage_fras.destroy()).place(x=390, y=270, width=60, height=30)
