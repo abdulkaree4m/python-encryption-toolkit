@@ -153,3 +153,6 @@ def generate_keys():
 
     d = multiplicative_inverse(e, phi)
     return ((e, n), (d, n))  # (public, private)
+def encrypt_rsa(plaintext, public_key):
+    e, n = public_key
+    return [pow(ord(char), e, n) for char in plaintext]
