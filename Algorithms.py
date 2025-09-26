@@ -136,3 +136,20 @@ def is_prime(num):
         if num % i == 0:
             return False
     return True
+def generate_keys():
+    p = q = 0
+    while not (is_prime(p) and is_prime(q)):
+        p = random.randint(50, 100)
+        q = random.randint(50, 100)
+
+    n = p * q
+    phi = (p - 1) * (q - 1)
+    e = random.randrange(1, phi)
+
+    g = gcd(e, phi)
+    while g != 1:
+        e = random.randrange(1, phi)
+        g = gcd(e, phi)
+
+    d = multiplicative_inverse(e, phi)
+    return ((e, n), (d, n))  # (public, private)
