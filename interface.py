@@ -156,8 +156,8 @@ class Encrypt:
         self.displayy_rc4 = Text(self.manage_fras_rc4, height=3, width=30)
         self.displayy_rc4.pack(pady=8)
         Button(self.manage_fras_rc4, text="Reset", bg="powder blue", command=self.Reset_rc4).place(x=20, y=100, width=40, height=25)
-        Button(self.manage_fras_rc4, text="تشفير", bg='#11900E', command=self.Results_rc4).place(x=380, y=167, width=90, height=25)
-        Button(self.manage_fras_rc4, text="فك تشفير", bg='#11900E', command=self.Decrypt_rc4).place(x=380, y=200, width=90, height=25)
+        Button(self.manage_fras_rc4, text="تشفير", bg="#90240E", command=self.Results_rc4).place(x=380, y=167, width=90, height=25)
+        Button(self.manage_fras_rc4, text="فك تشفير", bg="#902C0E", command=self.Decrypt_rc4).place(x=380, y=200, width=90, height=25)
         Button(self.manage_fras_rc4, text="رجوع", bg='red', fg='white', command=lambda: self.manage_fras_rc4.destroy()).place(x=390, y=270, width=60, height=30)
 
     def Reset_rc4(self):
@@ -181,8 +181,8 @@ class Encrypt:
 
     # ---------------- خيارات أخرى ----------------
     def show_other_options(self):
-        other_frame = Frame(self.root, bg='#D5DBDB')
+        other_frame = Frame(self.root, bg="#DADBD5")
         other_frame.place(x=10, y=80, width=488, height=120)
-        Label(other_frame, text="أدخل المفتاح:", bg='#D5DBDB').place(x=30, y=60)
+        Label(other_frame, text="أدخل المفتاح:", bg="#6F9516").place(x=30, y=60)
         Entry(other_frame, textvariable=self.key_var).place(x=120, y=60, width=150)
         Button(other_frame, text="رجوع", bg='red', fg='white', command=lambda: other_frame.destroy()).place(x=410, y=40, width=60, height=30)
