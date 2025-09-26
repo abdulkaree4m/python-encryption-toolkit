@@ -30,8 +30,8 @@ class Encrypt:
         Label(top_frame, text='Choose an Algorithm?', font=('Arial', 12)).pack(fill=X)
         Button(top_frame, text='RSA', bg='#85925E', fg='white', command=self.GUI_RSA).place(x=30, y=30, width=88, height=30)
         Button(top_frame, text='RC4', bg='#85519E', fg='white', command=self.encrypt_rc4).place(x=100, y=30, width=88, height=30)
-        Button(top_frame, text='خوارزميات قديمة', bg='#11919E', fg='white', command=self.encrypt_old_algorithms).place(x=170, y=30, width=88, height=30)
-        Button(top_frame, text='اخرى', bg='#11399E', fg='white', command=self.show_other_options).place(x=252, y=30, width=88, height=30)
+        Button(top_frame, text='خوارزميات قديمة', bg="#58696B", fg='white', command=self.encrypt_old_algorithms).place(x=170, y=30, width=88, height=30)
+        Button(top_frame, text='اخرى', bg="#0A2874", fg='white', command=self.show_other_options).place(x=252, y=30, width=88, height=30)
 
         # لوحة جانبية
         side_frame = Frame(self.root, bg='blue')
@@ -52,9 +52,11 @@ class Encrypt:
         self.displayy_mess = Text(self.manage_fras, height=5, width=40, bg="lightyellow")
         self.displayy_mess.pack(pady=10)
 
+
         Button(self.manage_fras, text="توليد المفاتيح", bg='#11922E', command=self.generate_keys_action).place(x=380, y=20, width=90, height=25)
         Button(self.manage_fras, text="تشفير", bg='#11900E', command=self.encrypt_action).place(x=380, y=135, width=90, height=25)
         Button(self.manage_fras, text="فك التشفير", bg='#11922E', command=self.decrypt_action).place(x=380, y=100, width=90, height=25)
+
         Button(self.manage_fras, text="Reset", bg="powder blue", command=self.reset_rsa_action).place(x=20, y=250, width=40, height=25)
         Button(self.manage_fras, text="رجوع", bg='red', fg='white', command=lambda: self.manage_fras.destroy()).place(x=390, y=270, width=60, height=30)
 
