@@ -50,32 +50,19 @@ def railway_de(text,key):
             return ''.join(reslute)
 
      #----------------------------------------------------------------
-def Caesar_algorithm(Plaint, KEY):
 
-            
-            Arabic_encryption = ""
-            English_encryption = ""
+# ---------------- Caesar (Additive) ---------------- #
+def Caesar_algorithm(text, key):
+    result = ""
+    for char in text:
+        if char.isalpha():
+            shift = 65 if char.isupper() else 97
+            result += chr((ord(char) + key - shift) % 26 + shift)
+        else:
+            result += char
+    return result
 
-            for s in range(97, 123):
-                English_encryption += chr(s)
-            for v in range(1568, 1611):
-                Arabic_encryption += chr(v)
+def Caesar_algorithm_De(text, key):
+    return Caesar_algorithm(text, -key)
 
-            result = ""
-            result1 = ""
 
-            for i in Plaint:
-                cat = unicodedata.name(i).split()[0]#
-                match cat:
-                    case "LATIN":
-                        n_encryption = (English_encryption.index(i.lower()) + KEY) % len(English_encryption)
-                        if i.isupper():
-                            result += English_encryption[n_encryption].upper()
-                        else:
-                            result += English_encryption[n_encryption]
-                    case "ARABIC":
-                        n_encryption1 = (Arabic_encryption.index(i) + KEY) % len(Arabic_encryption)
-                        result1 += Arabic_encryption[n_encryption1]
-
-            return result1 + result
-        
