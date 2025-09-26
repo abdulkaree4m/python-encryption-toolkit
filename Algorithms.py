@@ -156,3 +156,8 @@ def generate_keys():
 def encrypt_rsa(plaintext, public_key):
     e, n = public_key
     return [pow(ord(char), e, n) for char in plaintext]
+
+def decrypt_rsa(ciphertext, private_key):
+    d, n = private_key
+    return ''.join([chr(pow(char, d, n)) for char in ciphertext])
+
