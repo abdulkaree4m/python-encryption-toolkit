@@ -25,20 +25,20 @@ class Encrypt:
 
     def create_main_ui(self):
         # واجهة اختيار الخوارزمية
-        top_frame = Frame(self.root, bg='#85929E')
+        top_frame = Frame(self.root, bg="#D4AD20")
         top_frame.place(x=10, width=488, height=70)
         Label(top_frame, text='Choose an Algorithm?', font=('Arial', 12)).pack(fill=X)
-        Button(top_frame, text='RSA', bg='#85925E', fg='white', command=self.GUI_RSA).place(x=30, y=30, width=88, height=30)
+        Button(top_frame, text='RSA', bg="#32106D", fg='white', command=self.GUI_RSA).place(x=30, y=30, width=88, height=30)
         Button(top_frame, text='RC4', bg='#85519E', fg='white', command=self.encrypt_rc4).place(x=100, y=30, width=88, height=30)
         Button(top_frame, text='خوارزميات قديمة', bg='#11919E', fg='white', command=self.encrypt_old_algorithms).place(x=170, y=30, width=88, height=30)
-        Button(top_frame, text='اخرى', bg='#11399E', fg='white', command=self.show_other_options).place(x=252, y=30, width=88, height=30)
+        Button(top_frame, text='اخرى', bg="#0D1F4C", fg='white', command=self.show_other_options).place(x=252, y=30, width=88, height=30)
 
         # لوحة جانبية
         side_frame = Frame(self.root, bg='blue')
         side_frame.place(x=500, width=150, height=400)
         Label(side_frame, text='لوحه التحكم', font=('Arial', 12)).pack(fill=X)
-        Button(side_frame, text='تشفير', bg='#85929E', fg='white').place(x=40, y=30, width=70, height=30)
-        Button(side_frame, text='فك تشفير', bg='#85929E', fg='white').place(x=40, y=65, width=70, height=30)
+        Button(side_frame, text='تشفير', bg="#104E88", fg='white').place(x=40, y=30, width=70, height=30)
+        Button(side_frame, text='فك تشفير', bg="#06345C", fg='white').place(x=40, y=65, width=70, height=30)
         Button(side_frame, text='خروج', bg='red', fg='white', command=self.root.quit).place(x=40, y=100, width=70, height=30)
 
     # ---------------- RSA ----------------
