@@ -104,3 +104,4 @@ def RC4(data, key):
     keystream = PRGA(S)
     res = ''.join([chr(ord(c) ^ next(keystream)) for c in data])
     return res
+#-------------------------------------------
