@@ -1,6 +1,7 @@
 from tkinter import *
-from tkinter import ttk
-import math
-import random
-import unicodedata
-import Algorithms
+from interface import Encrypt
+
+if __name__ == "__main__":
+    root = Tk()
+    app = Encrypt(root)
+    root.mainloop()
