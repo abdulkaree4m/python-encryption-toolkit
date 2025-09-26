@@ -97,3 +97,10 @@ def PRGA(S):
         S[i], S[j] = S[j], S[i]
         K = S[(S[i] + S[j]) % 256]
         yield K
+
+def RC4(data, key):
+    key = [ord(c) for c in key]
+    S = KSA(key)
+    keystream = PRGA(S)
+    res = ''.join([chr(ord(c) ^ next(keystream)) for c in data])
+    return res
