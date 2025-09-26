@@ -20,7 +20,7 @@ def railway(text, key):
             if rail[i][j] != '\n':
                 result.append(rail[i][j])
     return "".join(result)
-
+#-------------------------------------
 def railway_de(cipher, key):
     rail = [['\n' for i in range(len(cipher))] for j in range(key)]
     dir_down = None
