@@ -78,3 +78,14 @@ def Multiplicative(text, key):
             result += char
     return result
 
+
+
+# ---------------- RC4 ---------------- #
+def KSA(key):
+    key_length = len(key)
+    S = list(range(256))
+    j = 0
+    for i in range(256):
+        j = (j + S[i] + key[i % key_length]) % 256
+        S[i], S[j] = S[j], S[i]
+    return S
