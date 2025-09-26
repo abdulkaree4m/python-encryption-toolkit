@@ -104,4 +104,9 @@ def RC4(data, key):
     keystream = PRGA(S)
     res = ''.join([chr(ord(c) ^ next(keystream)) for c in data])
     return res
-#-------------------------------------------
+
+#----------------------RSA---------------------
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
