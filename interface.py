@@ -37,8 +37,10 @@ class Encrypt:
         side_frame = Frame(self.root, bg='blue')
         side_frame.place(x=500, width=150, height=400)
         Label(side_frame, text='لوحه التحكم', font=('Arial', 12)).pack(fill=X)
+
         Button(side_frame, text='تشفير', bg='#85929E', fg='white').place(x=40, y=30, width=70, height=30)
         Button(side_frame, text='فك تشفير', bg='#85929E', fg='white').place(x=40, y=65, width=70, height=30)
+
         Button(side_frame, text='خروج', bg='red', fg='white', command=self.root.quit).place(x=40, y=100, width=70, height=30)
 
     # ---------------- RSA ----------------
@@ -52,9 +54,9 @@ class Encrypt:
         self.displayy_mess = Text(self.manage_fras, height=5, width=40, bg="lightyellow")
         self.displayy_mess.pack(pady=10)
 
-        Button(self.manage_fras, text="توليد المفاتيح", bg='#11922E', command=self.generate_keys_action).place(x=380, y=20, width=90, height=25)
-        Button(self.manage_fras, text="تشفير", bg='#11900E', command=self.encrypt_action).place(x=380, y=135, width=90, height=25)
-        Button(self.manage_fras, text="فك التشفير", bg='#11922E', command=self.decrypt_action).place(x=380, y=100, width=90, height=25)
+        Button(self.manage_fras, text="توليد المفاتيح", bg="#5D625E", command=self.generate_keys_action).place(x=380, y=20, width=90, height=25)
+        Button(self.manage_fras, text="تشفير", bg="#7B7E7A", command=self.encrypt_action).place(x=380, y=135, width=90, height=25)
+        Button(self.manage_fras, text="فك التشفير", bg="#718175", command=self.decrypt_action).place(x=380, y=100, width=90, height=25)
         Button(self.manage_fras, text="Reset", bg="powder blue", command=self.reset_rsa_action).place(x=20, y=250, width=40, height=25)
         Button(self.manage_fras, text="رجوع", bg='red', fg='white', command=lambda: self.manage_fras.destroy()).place(x=390, y=270, width=60, height=30)
 
